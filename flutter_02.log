@@ -1,0 +1,80 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine --start-paused -d emulator-5554 --devtools-server-address http://127.0.0.1:9100/ --target C:\Users\Brayan\Desktop\Proyecto_DGBA_Gestion_Ticket\copia_proyecto1\lib\main.dart
+
+## exception
+
+StateError: Bad state: StreamSink is closed
+
+```
+#0      _StreamSinkImpl.add (dart:_http/http_impl.dart:912:7)
+#1      _WebSocketImpl.add (dart:_http/websocket_impl.dart:1222:11)
+#2      VmService._call.<anonymous closure> (package:vm_service/src/vm_service.dart:1785:22)
+#3      VmService._call (package:vm_service/src/vm_service.dart:1787:8)
+#4      VmService.streamListen (package:vm_service/src/vm_service.dart:1710:7)
+#5      FlutterVmService.findExtensionIsolate (package:flutter_tools/src/vmservice.dart:982:21)
+#6      FlutterResidentDevtoolsHandler._waitForExtensionsForDevice (package:flutter_tools/src/resident_devtools_handler.dart:234:38)
+#7      FlutterResidentDevtoolsHandler._devicesWithExtensions (package:flutter_tools/src/resident_devtools_handler.dart:226:59)
+#8      FlutterResidentDevtoolsHandler.hotRestart (package:flutter_tools/src/resident_devtools_handler.dart:302:61)
+#9      HotRunner.restart (package:flutter_tools/src/run_hot.dart:793:42)
+<asynchronous suspension>
+#10     _AsyncCompleter.complete (dart:async/future_impl.dart:41:3)
+<asynchronous suspension>
+#11     Domain.handleCommand.<anonymous closure> (package:flutter_tools/src/commands/daemon.dart:297:22)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel master, 3.22.0-39.0.pre.1, on Microsoft Windows [Versi¢n 10.0.22631.3880], locale es-ES)
+    • Flutter version 3.22.0-39.0.pre.1 on channel master at C:\Dev\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 165e535474 (8 weeks ago), 2024-05-20 16:52:15 -0700
+    • Engine revision c2ef01f6f1
+    • Dart version 3.5.0 (build 3.5.0-172.0.dev)
+    • DevTools version 2.36.0-dev.10
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at C:\Users\Brayan\AppData\Local\Android\sdk
+    • Platform android-34, build-tools 34.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+    • Java version OpenJDK Runtime Environment (build 17.0.10+0--11572160)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop Windows apps (Visual Studio Community 2022 17.9.7)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.9.34902.65
+    • Windows 10 SDK version 10.0.22621.0
+
+[✓] Android Studio (version 2023.3)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.10+0--11572160)
+
+[✓] VS Code (version 1.91.1)
+    • VS Code at C:\Users\Brayan\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.92.0
+
+[✓] Connected device (4 available)
+    • sdk gphone x86 (mobile) • emulator-5554 • android-x86    • Android 11 (API 30) (emulator)
+    • Windows (desktop)       • windows       • windows-x64    • Microsoft Windows [Versi¢n 10.0.22631.3880]
+    • Chrome (web)            • chrome        • web-javascript • Google Chrome 126.0.6478.182
+    • Edge (web)              • edge          • web-javascript • Microsoft Edge 126.0.2592.102
+
+[✓] Network resources
+    • All expected network resources are available.
+
+• No issues found!
+```
